@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  web:
+    build: .
+    image: go-simple-crud
+    restart: always
+    environment:
+      APP_DB_USERNAME: go_crud
+      APP_DB_HOST: db
+      APP_DB_PASSWORD: secret
+      APP_DB_NAME: go_crud
+    ports:
+      - 8080:8080
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: go_crud
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: go_crud
+    volumes:
+      - ./initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
