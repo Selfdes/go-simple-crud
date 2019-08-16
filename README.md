@@ -44,7 +44,7 @@ export APP_DB_PASSWORD='your db password'
 #### /account/:id
 * `GET` : Get an account
 * `PUT` : Update an account
-* `DELETE` : Delete an project
+* `DELETE` : Delete an account
 
 ## CURL examples
 ```bash
