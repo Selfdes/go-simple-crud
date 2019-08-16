@@ -3,11 +3,6 @@ A RESTful API example for simple CRUD application with Go and PostgreSQL
 
 ## Docker run
 ```bash
-# Download this project
-go get github.com/Selfdes/go-simple-crud
-```
-
-```bash
 # Build and Run
 sudo docker-compose build
 sudo docker-compose up -d
